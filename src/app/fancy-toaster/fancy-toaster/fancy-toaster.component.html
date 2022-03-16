@@ -1,0 +1,18 @@
+<div
+  class="w-80 h-fit shadow-xl fixed top-14 right-14 bg-white rounded-xl flex"
+  [@showToasterAnimation]="showToaster ? 'show' : 'hide'">
+  <div class="h-min-full w-2 bg-green-600 rounded-l-xl"></div>
+  <div class="flex w-full h-fit flex-row p-3 justify-center">
+    <div class="h-min-full flex flex-col justify-center mr-3">
+      <fa-icon [icon]="faCheckCircle" class="text-4xl text-green-600"></fa-icon>
+    </div>
+    <div class="">
+      <p class="font-bold">Success</p>
+      <p class="text-sm">Your event was completely successful! And other messages as well</p>
+    </div>
+  </div>
+  <div class="absolute pl-2 pr-2 h-1  w-full bottom-0 left-0">
+    <div class="bg-green-600 h-full" [style.width]="progress"></div>
+  </div>
+</div>
+<button (click)="_showToaster()" class="bg-green-600 rounded-xl text-white p-4">Click me!</button>
